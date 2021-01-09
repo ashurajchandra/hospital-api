@@ -5,10 +5,12 @@ const app = express();
 
 const db = require("./config/mongoose");
 
-//response from server
-// app.get("/", (req, res) => {
-//   res.send("Hello World!");
-// });
+const mongoose = require("mongoose");
+const passport = require("passport");
+const passportJWT = require("./config/passport_jwt_strategy");
+
+//Middlewares
+app.use(express.urlencoded());
 
 app.use("/", require("./routes"));
 

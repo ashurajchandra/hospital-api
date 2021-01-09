@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
 
-router.use("/doctors/", require("./doctor"));
-router.use("/patients", require("./patient"));
+router.use("/doctors", require("./doctors"));
+router.use("/patients", require("./patients"));
 router.use("/reports", require("./reports"));
 
 module.exports = router;
